@@ -7,7 +7,7 @@ The standard CLI  is called `cmd` on Windows and `Terminal` on Linux and Mac OS.
 
 ## Basic commands in Windows and Unix
 
-|  Action      | Windows        | Linux / MacOS |
+|  Action      | Windows        | Linux / MacOS (Bash)|
 | ------------- |-------------:| -----:|
 | Change directory     | cd | cd |
 | Create file    | copy con     | touch|
@@ -22,6 +22,10 @@ The standard CLI  is called `cmd` on Windows and `Terminal` on Linux and Mac OS.
 | Search file | where     |   find, locate |
 | Print list of files and directories| dir |  ls, dir |
 | Help |   help  |  apropos, man, whatis  |
+
+You can find more useful commands in [this tutorial](https://www.codecademy.com/articles/command-line-commands) on Codecademy.
+
+*** 
 
 **Circumflex** ("^") means "Ctrl" (^C = Ctrl + C) on any system.
 
