@@ -2,7 +2,7 @@ The **command line interface (CLI)** is a text interface for your computer. It's
 
 CLIs "remember" a certain amount of commands that you run during a session, and you can navigate between them using ⇅ arrows: ↑ will get you the previous command you run, and ↓ goes to the next one. Another useful thing is *autocomplete* that helps you avoid typing long paths and filenames: just type the first few letters of a file/directory name you need, press `tab`, and voilà!
 
-The standard CLI  is called `cmd` on Windows and `Terminal` on Linux and Mac OS. As for me, the standard Windows `cmd` is not the most user friendly shell, but there are a few alternatives. For example, [this terminal](https://conemu.github.io/) allows switching between `cmd`, `PowerShell`, `Git bash` or any other CLI in a single app.
+The standard CLI  is called `cmd` on Windows and `Terminal` on Linux and Mac OS. As for me, the standard Windows `cmd` is not the most user friendly shell, but there are a few alternatives. For example, [this console](https://conemu.github.io/) allows switching between `cmd`, `PowerShell`, `Git bash` or any other shell in a single app.
 
 
 ## Basic commands in Windows and Unix
