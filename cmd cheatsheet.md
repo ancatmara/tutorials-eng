@@ -1,6 +1,8 @@
-**Командная строка** - это такое окошко, куда можно вписать команду, и компьютер ее выполнит. На Windows она называется cmd, на Linux - Terminal. В командной строке вы увидите свое текущее местоположение (например, `ancatmara@INGEN C:\Users\ancatmara`), а на следующей строке - особый символ, который означает, что можно вводить команду. На Windows это **>**, а на Linux - **$**. 
+The **command line interface (CLI)** is a text interface for your computer. It's a program that takes in commands, which it passes on to the computer's operating system to run. From the command line, you can navigate through files and folders on your computer and run applications. When you open a CLI, it shows you your current location in the file system (for example, `ancatmara@INGEN C:\Users\ancatmara`) and a special symbol that shows you that the CLI is ready to take a command. This symbol is **>** on Windows and **$** on Unix systems.
 
-As for me, the standard Windows `cmd` is not the most user friendly shell, but there are a few alternatives. For example, [this terminal](https://conemu.github.io/) allows easily switching between `cmd`, `PowerShell`, `Git bash` or any other shell in a single app.
+CLIs "remember" a certain amount of commands that you run during a session, and you can navigate between them using ⇅ arrows: ↑ will get you the previous command you run, and ↓ goes to the next one. Another useful thing is *autocomplete* that helps you avoid typing long paths and filenames: just type the first few letters of a file/directory name you need, press `tab`, and voilà!
+
+The standard CLI  is called `cmd` on Windows and `Terminal` on Linux and Mac OS. As for me, the standard Windows `cmd` is not the most user friendly shell, but there are a few alternatives. For example, [this terminal](https://conemu.github.io/) allows switching between `cmd`, `PowerShell`, `Git bash` or any other CLI in a single app.
 
 
 ## Basic commands in Windows and Unix
@@ -10,7 +12,7 @@ As for me, the standard Windows `cmd` is not the most user friendly shell, but t
 | Change directory     | cd | cd |
 | Create file    | copy con     | touch|
 | Create directory | mkdir  |  mkdir |
-| Delete file  | del, erase | rm; rm -rf -- удалить папку и все файлы в ней |
+| Delete file  | del, erase | rm; rm -rf -- delete folder and all files inside |
 | Delete directory    | rmdir      |   rmdir |
 | Print message | echo   |  echo |
 | Print file contents | type  | cat|
@@ -20,7 +22,6 @@ As for me, the standard Windows `cmd` is not the most user friendly shell, but t
 | Search file | where     |   find, locate |
 | Print list of files and directories| dir |  ls, dir |
 | Help |   help  |  apropos, man, whatis  |
-
 
 **Circumflex** ("^") means "Ctrl" (^C = Ctrl + C) on any system.
 
@@ -34,11 +35,14 @@ As for me, the standard Windows `cmd` is not the most user friendly shell, but t
 
 ^H — same as Backspace.
 
+**NB!** Many common shortcuts, like Ctrl+C / Ctrl+V for copy and paste, won't work in standard CLIs! 
+
 ## Python
 
 |Command| Action|
 |-------| -------:|
-|python| Run Python from terminal |
+|python| Run Python in terminal |
+|python <PYTHON_SCRIPT_NAME>| Run Python script|
 |python --version| Check Python version|
 |pip freeze| See list of installed packagess|
 |pip install| Install package|
@@ -51,31 +55,35 @@ More on working with `pip` in the [official documentation](https://pip.pypa.io/e
 If you have Anaconda, you can use its package manager called `conda` (the analogue of `pip`). Here is a nice conda [cheatsheet](https://conda.io/docs/_downloads/conda-cheatsheet.pdf) and [documentation](https://conda.io/docs/index.html).
 
 
-## Работа с Git
+## Git
 
-У git очень много возможностей, и про работу с ним написаны толстые книжки (см. пример ниже :D). Здесь перечислены только самые часто употребляемые команды.
+Git is a **version control system (VCS)** and a very powerful tool honoured with a few thick textbooks ([here](https://www.oreilly.com/library/view/version-control-with/9781449345037/) is just one example). You'll find some basic commands below.
 
-|Команда| Значение|
+|Command| Action|
 |-------| -------:|
-|git clone| Склонировать репозиторий по указанной ссылке|
-|git pull| Скачать изменения из удаленного репозитория|
-|git init| Создать репозиторий |
-|git status| Посмотреть статус изменений|
-|git add| Добавить указанные файлы в список отслеживаемых|
-|git add \*| Добавить все файлы|
-|git rm| Удалить файлы|
-|git commit -m| Закоммитить изменения; после -m в кавычках пишется сообщение о том, что изменено|
-|git push| Отправить изменения в удаленный репозиторий|
-|git log| Посмотреть журнал действий|
+|git clone <LINK>| Clone repository|
+|git pull| Pull changes from remote repository|
+|git init| Create repository|
+|git status| Check status of local changes|
+|git add| Add selected files to be tracked|
+|git add \*| Add all files to be tracked|
+|git rm| Delete files|
+|git commit -m "Commit message"| Commit changes; -m is for commit message|
+|git push| Push local changes to remote|
+|git log| Check log|
 
-Более продвинутые вещи -- например, как исправлять ошибки или как работать с разными ветками -- можно почитать в [пошаговом тьюториале](https://git-scm.com/book/en/v1/Git-Basics-Undoing-Things) на официальном сайте.
+You can download git from the [official website](https://git-scm.com/downloads). They also have great multilingual [documentation](https://git-scm.com/book/en/v2), where you can find information on more advanced things like [correcting mistakes](https://git-scm.com/book/en/v1/Git-Basics-Undoing-Things) and [branching](https://git-scm.com/book/en/v2/Git-Branching-Branches-in-a-Nutshell)
+  
+**NB!** Git installation for Windows comes with a Bash CLI, which is a useful tool for running [bash](https://en.wikipedia.org/wiki/Bash_(Unix_shell)) commands that aren't supported in Windows `cmd`.
 
-**NB!** Чтобы не печатать длинные пути целиком, существует *автозаполнение*: набираете 1-2 первые буквы, нажимаете tab и вуаля!
+### Authorisation
 
-### Как настроить авторизацию в Git?
+After you install `git` on your machine, there are two important things to do.
 
-После установки git необходимо его настроить, это делается с помощью двух команд:
+  1. Tell git your username and email.
+  
+`git config --global user.name "your github login"`
 
-`git config --global user.name "ваш логин на github"`
-
-`git config --global user.email "почту, которую указали при регистрации на GitHub.com"`
+`git config --global user.email "the email you registered with on github.com"`
+  
+  2. Generate an SSH key on your machine and upload it to GitHub. Using the SSH protocol, you can connect and authenticate to remote servers and services without supplying your username and personal access token at each visit. Here is a nice step-by-step [guide](https://docs.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh/about-ssh) from GitHub.
