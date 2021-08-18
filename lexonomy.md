@@ -8,15 +8,21 @@
 
 The path in this command depends on where you are; the example assumes that you are in the directory where you cloned the Lexonomy repo from GitHub.
 
-2. `source ./<ENV>/bin/activate`
+2. `cp siteconfig.json.template siteconfig.json`
+
+Create a config file from template.
+
+3. `python3 ./adminscripts/init.py`
+
+Initialise a database and create the admin user. After running this command, you will see a prompt in the terminal: `I have created a user account for root@localhost. The password is: ******`. **Save this password**, you'll need it to log in!
+
+4. `source ./<ENV>/bin/activate`
 
 \<ENV\> is your environment name. The assumption is that its source files are within `lexonomy/website` directory, otherwise please change the path according to their location.
 
-3. `python3 lexonomy.py`
+5. `python3 lexonomy.py`
 
 You can then open `http://127.0.0.1:8080` or `http://localhost:8080/` in your browser and enjoy everything that `https://www.lexonomy.eu/`offers locally. 
-
-At first launch, you will see a prompt in the terminal: `I have created a user account for root@localhost. The password is: ******`. **Save this password**, you'll need it to log in!
 
 ### Forking a repo
 
