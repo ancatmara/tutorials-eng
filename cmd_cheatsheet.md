@@ -76,7 +76,7 @@ Git is a **version control system (VCS)** and a very powerful tool honoured with
 |git push| Push local changes to remote|
 |git log| Check log|
 
-You can download git from the [official website](https://git-scm.com/downloads). They also have great multilingual [documentation](https://git-scm.com/book/en/v2), where you can find information on more advanced things like [correcting mistakes](https://git-scm.com/book/en/v1/Git-Basics-Undoing-Things) and [branching](https://git-scm.com/book/en/v2/Git-Branching-Branches-in-a-Nutshell)
+You can download git from the [official website](https://git-scm.com/downloads). They also have great multilingual [documentation](https://git-scm.com/book/en/v2), where you can find information on more advanced things like [correcting mistakes](https://git-scm.com/book/en/v1/Git-Basics-Undoing-Things) and [branching](https://git-scm.com/book/en/v2/Git-Branching-Branches-in-a-Nutshell).
   
 **NB!** Git installation for Windows comes with a Bash CLI, which is a useful tool for running [bash](https://en.wikipedia.org/wiki/Bash_(Unix_shell)) commands that aren't supported in Windows `cmd`.
 
@@ -84,9 +84,9 @@ You can download git from the [official website](https://git-scm.com/downloads).
 
 After you install `git` on your machine, there are two important things to do.
 
-  1. Tell git your username and email.
+  1. Tell git your name and email.
   
-`git config --global user.name "your github login"`
+`git config --global user.name "your name / github login"`
 
 `git config --global user.email "the email you registered with on github.com"`
   
