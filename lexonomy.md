@@ -90,7 +90,7 @@ Now everything is set for work 😎
 
 ![](./img/7.png)
 
-You will see the SketchEngine button next to the <entry> tag (and any other elements you selected while configuring the connection). Press it and send either a simple or a CQL query to SketchEngine to get a list of examples. Select those you would like to add to the entry.
+You will see the SketchEngine button next to the \<entry\> tag (and any other elements you selected while configuring the connection). Press it and send either a simple or a CQL query to SketchEngine to get a list of examples. Select those you would like to add to the entry.
   
 ![](./img/10.png)
   
