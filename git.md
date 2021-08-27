@@ -119,7 +119,7 @@ Remote repositories are versions of your project that are hosted on the Internet
  ### Changing remote urls
 `git remote set-url origin <NEW_URL>`
 
- ### The magic of `git pull` and `git push`
+ ### The magic of _git pull_ and _git push_
 `git pull` = `git fetch origin` + `git merge`
   
 `git push` = `git push origin master`
