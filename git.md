@@ -88,25 +88,31 @@ Remote repositories are versions of your project that are hosted on the Internet
  `git remote show <REMOTE_NAME>/<BRANCH_NAME>`
 
  ### Adding remotes
-`git remote add elexis-eu https://github.com/elexis-eu/lexonomy.git`
+`git remote add <REMOTE_NAME> <REMOTE_URL>` 
+
+#### Example 
+  `git remote add elexis-eu https://github.com/elexis-eu/lexonomy.git`
  
 ### Renaming remotes
+  `git remote rename <OLD_REMOTE_NAME> <NEW_REMOTE_NAME>`
+  
+ #### Example 
 `git remote rename elexis-eu elexis`
  
   
  ### Getting changes from remotes
-`git fetch elexis`
+`git fetch <REMOTE_NAME>`
   
 `git fetch --all`
 
  ### Deleting remotes
  
-`git remote remove elexis`
+`git remote remove <REMOTE_NAME>`
 
  ### Changing remote urls
 `git remote set-url origin <NEW_URL>`
 
- #### The magic of `git pull` and `git push`
+ ### The magic of `git pull` and `git push`
 `git pull` = `git fetch origin` + `git merge`
   
 `git push` = `git push origin master`
@@ -116,6 +122,10 @@ Remote repositories are versions of your project that are hosted on the Internet
 A branch in Git is simply a lightweight movable pointer to one of these commits. The default branch name in Git is master. As you start making commits, you’re given a master branch that points to the last commit you made. Every time you commit, the master branch pointer moves forward automatically.
   
 Topic branches are useful in projects of any size. A topic branch is a short-lived branch that you create and use for a single particular feature or related work.
+  
+ ![](./img/lr-branches-2.png)
+  
+ ![](./img/lr-branches-1.png)
   
  ### Checking branches
 `git branch -vv`
@@ -137,11 +147,11 @@ Create a new branch.
   
 `git push origin <BRANCH_NAME>`
  
-Get a new local branch fromthe remote.
+Get a new local branch from the remote.
  
-`git checkout -b <LOCAL_BRANCH_NAME> origin/<REMOTE_BRANCH_NAME>` = `git checkout --track origin/<REMOTE_BRANCH_NAME>` = `git checkout <REMOTE_BRANCH_NAME>`  
+`git checkout <REMOTE_BRANCH_NAME>` = `git checkout --track origin/<REMOTE_BRANCH_NAME>` =  `git checkout -b <LOCAL_BRANCH_NAME> origin/<REMOTE_BRANCH_NAME>` 
 
- Example: 
+ #### Example 
 `git checkout -b serverfix origin/serverfix` = `git checkout --track origin/serverfix` = `git checkout serverfix`
 
 ### Merging
@@ -180,7 +190,7 @@ With the rebase command, you can take all the changes that were committed on one
 
 Often, you’ll do this to make sure your commits apply cleanly on a remote branch — perhaps in a project to which you’re trying to contribute but that you don’t maintain. In this case, you’d do your work in a branch and then rebase your work onto origin/master when you were ready to submit your patches to the main project. That way, the maintainer doesn’t have to do any integration work — just a fast-forward or a clean apply.
   
- `git checkout experiment`
+ `git checkout <BRANCH_NAME>`
   
 `git rebase master`
 
