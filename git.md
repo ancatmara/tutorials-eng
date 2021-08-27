@@ -1,6 +1,12 @@
 # Git
 
 Git is a **version control system (VCS)** and a very powerful tool honoured with a few thick textbooks ([here](https://www.oreilly.com/library/view/version-control-with/9781449345037/) is just one example). You can download git from the [official website](https://git-scm.com/downloads). They also have great multilingual [documentation](https://git-scm.com/book/en/v2), where you can find information on more advanced things like [correcting mistakes](https://git-scm.com/book/en/v1/Git-Basics-Undoing-Things) and [branching](https://git-scm.com/book/en/v2/Git-Branching-Branches-in-a-Nutshell).
+
+### Git working areas
+![](./img/areas.png)
+
+### Git project lifecycle
+![](./img/lifecycle.png)
   
 **NB!** Git installation for Windows comes with a Bash CLI, which is a useful tool for running [bash](https://en.wikipedia.org/wiki/Bash_(Unix_shell)) commands that aren't supported in Windows `cmd`.
 
@@ -30,6 +36,7 @@ After you install `git` on your machine, there are two important things to do.
 |git commit -m "Commit message"| Commit changes; -m is for commit message|
 |git push| Push local changes to remote|
 |git log| Check log|
+  
   
 ## Correcting mistakes
   
